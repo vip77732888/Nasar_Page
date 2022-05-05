@@ -1,0 +1,130 @@
+@media only screen and (max-width: 1200px) {
+    .intro{
+        height: 85vh;
+    }
+    .goal__image{
+        max-width: 476px;
+    }
+}
+@media only screen and (max-width: 1000px){
+    
+}
+@media only screen and (max-width: 768px){
+    .title{
+        line-height: 41px;
+        font-size: 37px;
+    }
+}
+@media only screen and (max-width: 627px){
+    #nav__header{
+        display: none;
+    }
+   
+    .header__inner{
+       background: #E7ECEE;
+       padding-top: 5px;
+       position: fixed;
+    }
+    
+    .hamburger-menu{
+        display: block;
+  
+      }
+    section{
+        padding: 0 15px
+    }
+    .intro {
+        height: 53vh;
+    }
+    .title{
+        font-size: 25px;
+        line-height: 33px;
+    }
+    #header__logo{
+        width: 136px;
+    }
+    .about__header {
+        margin-bottom: 56px;
+    }
+    
+    .about__wrap-stat {
+        width: 50%;
+        margin: 0px 0 88px 0;
+    }
+    .stat__number{
+        font-size: 63px;
+    }
+
+    .goal__info{
+        flex-wrap: wrap;
+        padding-bottom: 20px;
+    }
+    .info__text:first-child {
+        margin-bottom: 0;
+    }
+    .info__text:nth-child(2){
+        margin: 16px 0;
+    }
+    .goal__info:last-child{
+        flex-direction: column-reverse;
+    }
+    .goal__info-aside {
+        flex-direction: column;
+    }
+    .middle__column{
+        margin: 0;
+    }
+    .goal__text-column {
+        margin: 20px 0px 20px 0px;
+    }
+    .goal__text{
+        margin-bottom: 9px;
+        max-width: none;
+    }
+    footer{
+        padding: 0 15px
+    }
+    .stat__text{
+        text-align: center;
+    }
+    .goal__image {
+        max-width: 100%;
+    }
+    .section__title{
+        text-align: center;
+    }
+    .header__goal {
+        margin-bottom: -7px;
+    }
+    .whywe__card-item {
+        width: 100%;
+    }
+    .item__text {
+        padding: 7px 34px 20px;
+    }
+    .item__icon {
+        width: 97px;
+        height: 97px;
+    }
+    .water__sign {
+        flex-direction: column;
+    }
+    .footer__logo {
+        padding: 19px 0;
+    }
+    
+}
+@media only screen and (max-width: 400px){
+    .title {
+        font-size: 22px;
+    }
+    .intro {
+        height: 52vh;
+    }
+    .title{
+        line-height: 26px;
+    }
+    .intro__inner {
+        margin-top: 32px;
+    }
+}

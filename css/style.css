@@ -1,0 +1,464 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto:wght@400;500;700&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    color: #313131;
+}
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    box-sizing: border-box;
+   
+}
+
+.container {
+    width: 100%;
+    max-width: 927px;
+    margin: 0 auto;
+}
+
+/* --------------header & nav---------------*/
+
+nav{
+    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+    
+}
+nav ul{
+    display: flex;
+    margin-right: 12px;
+}
+nav ul li{
+    margin-right: 20px;
+    list-style: none;
+
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #313131;
+}
+
+.language .btn{
+    text-decoration: none;
+    margin-right: 13px;
+    color: #313131;
+    font-family: 'Lato', sans-serif;
+    padding: 3px;
+    font-weight: 500;
+}
+
+.language .btn:hover{
+    color: #C50066;
+    transition: .2s ease-in-out;
+    border: #313131 1px solid;
+}
+
+nav .btn a:last-child{
+    margin-right: 0;
+}
+.active__lg{
+  border: #313131 1px solid;
+}
+.header__inner{
+    padding-top: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    max-width: 927px;
+    
+}
+
+.active, ul li .btn:hover {
+    border-bottom: 1.5px solid #C50066;
+    transition: .3s ease-in-out;
+}   
+    /* menu__burger */
+
+#menu__toggle {
+    opacity: 0;
+  }
+  .hamburger-menu{
+    display: none;
+  }
+  
+  .menu__btn {
+    display: flex; 
+    align-items: center;  
+    position: fixed;
+    top: 19px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  /* добавляем "гамбургер" */
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #616161;
+  }
+
+  .menu__btn > span::before {
+    content: '';
+    width: 25px;
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 8px;
+    width: 18px;
+  }    
+  .menu__btn > span{
+    width: 12px;
+  }
+  .menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 268px;
+    height: 343px;
+    margin: 0;
+    padding: 55px 0;
+    list-style: none;
+    background: linear-gradient(226.63deg, #DAE3E5 17.03%, #F2F2F3 84.82%);
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+  }
+  /* элементы меню */
+  .menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: #333;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+  }
+  .menu__item:hover{
+      color: #C50066;
+      background-color: #fff;
+  }
+ 
+  
+  #menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    left: 0;
+  }
+  .menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+  transition-duration: .25s;
+}
+.menu__box {
+  transition-duration: .25s;
+}
+.menu__item {
+  transition-duration: .25s;
+}
+/* ------------- accordion  ----------- */
+.transition, ul li i:before, ul li i:after, p {
+    transition: all 0.25s ease-in-out;
+  }
+  
+  .flipIn, ul li, h1 {
+    animation: flipdown 0.5s ease both;
+  }
+  
+  .no-select, h2 {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+
+
+  @media (max-width: 550px) {
+    body {
+      box-sizing: border-box;
+      transform: translate(0, 0);
+      max-width: 100%;
+      min-height: 100%;
+      margin: 0;
+      left: 0;
+    }
+  }
+  
+  h1, h2 {
+    color: #313131;
+    font-weight: 500;
+  }
+  h2:hover{
+      color: #C50066;
+      transition: .2s linear;
+  }
+  
+  h1 {
+    text-transform: uppercase;
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: 3px;
+    font-weight: 100;
+  }
+  
+  h2 {
+    font-size: 12px;
+    cursor: pointer;
+  }
+  
+  p {
+    color: #313131;
+    
+    position: relative;
+    overflow: hidden;
+    max-height: 800px;
+    opacity: 1;
+    transform: translate(0, 0);
+    margin-top: 10px;
+    z-index: 2;
+    margin-left: 10px;
+  }
+  
+  ul li p a{
+    
+    font-size: 12px;
+    color: #313131;
+    text-decoration: none;
+  }
+  ul li p a:hover{
+    color: #C50066;
+      transition: .2s linear;
+  }
+  
+  ul li:nth-of-type(1) {
+    animation-delay: 0.5s;
+  }
+  ul li:nth-of-type(2) {
+    animation-delay: 0.75s;
+  }
+  ul li:nth-of-type(3) {
+    animation-delay: 1s;
+  }
+  ul li:last-of-type {
+    padding-bottom: 0;
+  }
+  ul li i {
+    position: absolute;
+    transform: translate(-180px, 0);
+    margin-top: 3px;
+    right: 0;
+}
+  ul li i:before, ul li i:after {
+    content: "";
+    position: absolute;
+    background-color: #C50066;
+    width: 2px;
+    height: 7px;
+  }
+  ul li i:before {
+    transform: translate(-2px, 0) rotate(45deg);
+  }
+  ul li i:after {
+    transform: translate(2px, 0) rotate(-45deg);
+  }
+  ul li input[type=checkbox] {
+    position: absolute;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+  }
+  ul li input[type=checkbox]:checked ~ p {
+    margin-top: 0;
+    max-height: 0;
+    opacity: 0;
+    transform: translate(0, 50%);
+  }
+  ul li input[type=checkbox]:checked ~ i:before {
+    transform: translate(2px, 0) rotate(45deg);
+  }
+  ul li input[type=checkbox]:checked ~ i:after {
+    transform: translate(-2px, 0) rotate(-45deg);
+  }
+  
+  @keyframes flipdown {
+    0% {
+      opacity: 0;
+      transform-origin: top center;
+      transform: rotateX(-90deg);
+    }
+    5% {
+      opacity: 1;
+    }
+    80% {
+      transform: rotateX(8deg);
+    }
+    83% {
+      transform: rotateX(6deg);
+    }
+    92% {
+      transform: rotateX(-3deg);
+    }
+    100% {
+      transform-origin: top center;
+      transform: rotateX(0deg);
+    }
+  }
+  
+
+  
+/* --------------- Section -------------- */
+
+.intro{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: url('../img/header__bg.png') no-repeat ;
+    background-size: cover;
+    justify-content: center;
+    background-position-x: center;
+}
+.intro__inner{
+   max-width: 630px;
+}
+.title{
+    font-size: 48px;
+    font-weight: 500;
+    line-height: 56px;
+    
+    text-transform: uppercase;
+}
+.intro__title{
+    margin-bottom: 17px;
+}
+.colortext{
+    color: #C50066;
+}
+.subtitle{
+    font-size: 12px;
+    line-height: 17px;
+    max-width: 240px;
+
+}
+/* ---------- big__section ---------- */
+.big__section{
+    background: url('../img/section__background.png') no-repeat;
+    background-position: 0px 55px;
+    height: 100%;
+    background-color: #E7ECEE;
+    background-size: cover;
+    width: 100%;
+    padding-top: 79px;
+}
+.stat__number{
+    font-size: 96px;
+    font-weight: 700;
+    color: #C50066;
+}
+.text{
+    font-size: 12px;
+    line-height: 14px;
+}
+.about__wrap{
+    display: flex;
+    flex-wrap: wrap;
+}
+.about__wrap-stat{
+    width: 33.3%;
+    margin: 0 0 125px 0;
+    
+}
+.about__header{
+    margin-bottom: 113px;
+}
+.about__wrap-stat:last-child{
+    padding-top: 27px;
+}
+/* ----------goal section ---------- */
+.goal__info{
+    display: flex;
+    padding-bottom: 90px;
+    flex: 1 1 0;
+}
+.header__goal{
+    margin-bottom: 40px;
+}
+.goal__text-column{
+    margin: 33px 37px 0 0;
+}
+.goal__text{
+    max-width: 306px;
+    margin-bottom: 60px;
+}
+.goal__info-aside{
+    display: flex;
+}
+.middle__column{
+    margin: 0 35px 0 79px;
+}
+.info__text:first-child{
+    margin-bottom: 61px;
+}
+
+/* ------------ whywe section ------------ */
+.whywe__card{
+    display: flex;
+    flex-wrap: wrap;
+}
+.whywe__card-item{
+    width: 33.3%;
+    text-align: center;
+    
+}
+.item__text{
+    padding: 25px 34px 72px;   
+}
+.item__icon{
+    width: 130px;
+    height: 130px;
+}
+.whywe{
+    padding-bottom: 88px;
+}
+
+/* -------------- footer --------------- */
+footer{
+    background-color: #E7ECEE;
+    border-top: 1px solid #CCD1D4;
+}
+.footer__logo{
+    padding: 40px 0;
+}
+.footer__inner{
+    display: flex;
+    justify-content: space-between;
+}
+.water__sign{
+    font-size: 12px;
+    color: #666E71;
+    display: flex;
+    justify-content: space-between;
+}
+.water__sign-ad{
+    margin-right: 30px;
+}
+
+
